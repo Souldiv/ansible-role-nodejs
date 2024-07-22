@@ -17,7 +17,7 @@
 
 - name: "Add nodejs {{ nodejs_version }} ppa for apt repo"
   apt_repository:
-    repo: "deb[arch=amd64 signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_{{ nodejs_version }} nodistro main"
+    repo: "deb https://deb.nodesource.com/node_{{ nodejs_version }} nodistro main"
     state: present
   register: node_repo
 
